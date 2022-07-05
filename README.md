@@ -29,11 +29,13 @@ example :POST http://localhost:80/api/auth/belimobil
 
 ##TRANSAKSI MOTOR
 example :POST http://localhost:80/api/auth/belimotor
+```json
 {
     "nama":"deva",
     "id_item":"62c3e7666b40a81b8e052138", //sesuaikan id dari collection motor
     "stok_item":"1"
 }
+```
 ##GET TRANSAKSI AKHIR
 example :GET http://localhost:80/api/auth/latest-history
 
