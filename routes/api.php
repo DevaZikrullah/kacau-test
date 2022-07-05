@@ -48,7 +48,7 @@ Route::group([
         AuthController::class, 'me'
     ]);
 
-    Route::get('/kendaraan', [\App\Repositories\KendaraanRepository::class , 'getMobil']);
+    Route::get('/kendaraan', [KendaraanController::class , 'getAllKendaraan']);
     Route::post('/belimobil', [\App\Repositories\TransaksiRepository::class , 'addTransaksiMobil']);
     Route::post('/belimotor', [\App\Repositories\TransaksiRepository::class , 'addTransaksiMotor']);
     Route::get('/history', [\App\Repositories\TransaksiRepository::class , 'getHistory']);

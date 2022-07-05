@@ -12,14 +12,18 @@ class KendaraanController extends Controller
 {
     public function getAllKendaraan(KendaraanServices $kendaraanServices)
     {
-        $client = new Client(
-            "mongodb://mongo-1:27017", ["username" => "root", "password" => "root"]);
-
-        $collection = $client->laravel_sail->motors;
-        $cursor = $collection->find(['_id' => new ObjectId( '62c2b2720335d9ef4a08a369')])->toArray();
-        dd($cursor);
+        $result = ['status' => 200];
 
 
-//        return $insertOneResult;
+        try {
+            $result['data'] = $items = $kendaraanServices->getKendaraan();
+        } catch (Exception $e) {
+            $result = [
+                'status' => 500,
+                'error' => $e->getMessage()
+            ];
+        }
+
+        return response()->json($result, $result['status']);
     }
 }
