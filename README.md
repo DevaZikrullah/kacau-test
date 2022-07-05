@@ -7,6 +7,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+
+Buat database = laravel_sail
+username = root
+password = root
+
 ##LOGIN
 example :POST http://localhost:80/api/auth/login
 {
