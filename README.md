@@ -14,19 +14,22 @@ password = root
 
 ##LOGIN
 example :POST http://localhost:80/api/auth/login
+```json
 {
     "email":"test@example.com",
     "password":"password"
 }
+```
 
 ##TRANSAKSI MOBIL
 example :POST http://localhost:80/api/auth/belimobil
+```json
 {
     "nama":"deva",
     "id_item":"62c3e7666b40a81b8e052138", //sesuaikan id dari collection mobils
     "stok_item":"1"
 }
-
+```
 ##TRANSAKSI MOTOR
 example :POST http://localhost:80/api/auth/belimotor
 ```json
